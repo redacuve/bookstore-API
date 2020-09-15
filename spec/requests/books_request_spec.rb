@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Books API", type: :request do
+RSpec.describe 'Books API', type: :request do
   # initialize test data
   let!(:books) { create_list(:book, 10) }
   let(:book_id) { books.first.id }
