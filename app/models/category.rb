@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_many :book
+  has_many :books
 
   validates_presence_of :name
 end
