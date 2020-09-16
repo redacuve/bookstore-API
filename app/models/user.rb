@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_secure_password
   has_many :books
 
   validates_presence_of :name
