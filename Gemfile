@@ -10,6 +10,7 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+gem 'bcrypt', '~> 3.1.7'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production

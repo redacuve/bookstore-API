@@ -46,7 +46,7 @@ RSpec.describe 'Books API', type: :request do
   end
 
   describe 'POST /books' do
-    let(:valid_attributes) { { title: 'Book 1', author: 'Author 1', percentage: 1, category_id: 1 } }
+    let(:valid_attributes) { { title: 'Book 1', author: 'Author 1', percentage: 1, category_id: 1, user_id: 1 } }
 
     context 'when the request is valid' do
       before { post '/books', params: valid_attributes }
@@ -68,7 +68,7 @@ RSpec.describe 'Books API', type: :request do
       end
 
       it 'returns a validation failure message' do
-        expect(response.body).to match(/Validation failed: Category must exist, Title can't be blank/)
+        expect(response.body).to match(/Validation failed: Category must exist, User must exist, Title can't be blank, Percentage is not a number/)
       end
     end
   end

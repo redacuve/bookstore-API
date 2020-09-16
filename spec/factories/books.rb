@@ -4,5 +4,6 @@ FactoryBot.define do
     author { Faker::Book.author }
     percentage { 1 }
     category { create(:category) }
+    user { create(:user) }
   end
 end
