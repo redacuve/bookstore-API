@@ -2,12 +2,12 @@ class BooksController < ApplicationController
   before_action :set_book, only: %i[show update destroy]
 
   def index
-    @books = Book.all
+    @books = current_user.books
     json_response(@books)
   end
 
   def create
-    @book = Book.create!(books_params)
+    @book = current_user.books.create!(books_params)
     json_response(@book, :created)
   end
 
