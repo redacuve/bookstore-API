@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope module: :v2, constraints: ApiVersion.new('v2', true) do
+  scope module: :v2, constraints: ApiVersion.new('v2', false) do
     resources :books, only: :index
   end
 
